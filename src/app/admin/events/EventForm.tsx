@@ -38,7 +38,7 @@ const EMPTY: FormData = {
 type Props = {
   mode: "create" | "edit";
   eventId?: number;
-  initial?: Partial<FormData> & { gallery?: string[] };
+  initial?: Partial<Omit<FormData, "gallery">> & { gallery?: string[] | string };
 };
 
 /* ── Date / Time conversion helpers ─────────────────────────────────────── */

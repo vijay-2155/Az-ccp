@@ -153,6 +153,108 @@ body {
   border-color: rgba(34, 211, 238, 0.5);
 }
 
+
+/* ─── Platform Brand Cards ────────────────────────────────────────────────── */
+.platform-card-cz {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 82, 212, 0.18) 0%, rgba(67, 100, 247, 0.12) 100%);
+  border: 1px solid rgba(99, 120, 255, 0.3);
+  box-shadow:
+    0 2px 12px rgba(67, 100, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.platform-card-cz::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #4364F7, #22D3EE);
+  border-radius: 14px 0 0 14px;
+}
+.platform-card-cz:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(0, 82, 212, 0.28) 0%, rgba(67, 100, 247, 0.2) 100%);
+  border-color: rgba(99, 120, 255, 0.55);
+  box-shadow:
+    0 8px 28px rgba(67, 100, 247, 0.3),
+    0 0 32px rgba(34, 211, 238, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+.platform-card-cz:active { transform: translateY(0); }
+
+.platform-card-icon-cz {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(67, 100, 247, 0.5), rgba(34, 211, 238, 0.3));
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93C5FD;
+  flex-shrink: 0;
+}
+
+.platform-card-az {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.06) 0%, rgba(17, 19, 32, 0.9) 100%);
+  border: 1px solid rgba(255, 214, 10, 0.18);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 214, 10, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.platform-card-az::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #FFD60A, #FFAA00);
+  border-radius: 14px 0 0 14px;
+}
+.platform-card-az:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.1) 0%, rgba(24, 25, 40, 0.95) 100%);
+  border-color: rgba(255, 214, 10, 0.4);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.4),
+    0 0 24px rgba(255, 214, 10, 0.08),
+    inset 0 1px 0 rgba(255, 214, 10, 0.08);
+}
+.platform-card-az:active { transform: translateY(0); }
+
+.platform-card-icon-az {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 214, 10, 0.08);
+  border: 1px solid rgba(255, 214, 10, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 4px;
+}
+
 /* ─── Timeline ─────────────────────────────────────────────────────────────── */
 .az-timeline-line {
   border-left: 2px solid rgba(255, 214, 10, 0.25);

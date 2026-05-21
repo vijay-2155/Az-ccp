@@ -21,17 +21,27 @@ const IconEdit = () => (
 );
 
 export default async function AdminDashboard() {
-  const [total, live, upcoming, past] = await Promise.all([
-    prisma.event.count(),
-    prisma.event.count({ where: { status: "live" } }),
-    prisma.event.count({ where: { status: "upcoming" } }),
-    prisma.event.count({ where: { status: "past" } }),
-  ]);
+  let total = 0, live = 0, upcoming = 0, past = 0;
+  let recent: any[] = [];
+  let dbError: string | null = null;
 
-  const recent = await prisma.event.findMany({
-    orderBy: { updatedAt: "desc" },
-    take: 5,
-  });
+  try {
+    const [t, l, u, p] = await Promise.all([
+      prisma.event.count(),
+      prisma.event.count({ where: { status: "live" } }),
+      prisma.event.count({ where: { status: "upcoming" } }),
+      prisma.event.count({ where: { status: "past" } }),
+    ]);
+    total = t; live = l; upcoming = u; past = p;
+
+    recent = await prisma.event.findMany({
+      orderBy: { updatedAt: "desc" },
+      take: 5,
+    });
+  } catch (err: any) {
+    console.error("DB connection error:", err);
+    dbError = "Cannot reach database. Check your network and DATABASE_URL in .env.local.";
+  }
 
   const stats = [
     {
@@ -102,6 +112,20 @@ export default async function AdminDashboard() {
           New Event
         </Link>
       </div>
+
+      {dbError && (
+        <div className="rounded-2xl p-4 bg-red-950/20 border border-red-500/30 flex items-start gap-3 backdrop-blur-md">
+          <svg className="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <div>
+            <h4 className="text-sm font-bold text-red-200">Database Offline / Connection Failure</h4>
+            <p className="text-xs text-red-400/80 mt-1">
+              Could not connect to the database (fetch failed). Showing offline mock data. Please check your network connection or <code>DATABASE_URL</code> in <code>.env.local</code>.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* ── Stat cards ──────────────────────────────────────────────────── */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

@@ -186,7 +186,7 @@ export default function EventsSection() {
 
         <div className="mt-14 text-center">
           <p className="text-sm mb-5" style={{ color: "#3A4058" }}>Want your chapter&apos;s event listed here?</p>
-          <a href="mailto:campusconnect@algozenit.com" className="az-btn-outline !text-sm">Submit Your Event</a>
+          <Link href="/admin/events/new" className="az-btn-outline !text-sm">Submit Your Event</Link>
         </div>
       </div>
     </section>

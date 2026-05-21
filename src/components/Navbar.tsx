@@ -122,20 +122,28 @@ export default function Navbar() {
 
             {/* ── Right-side CTAs ────────────────────────────── */}
             <div className="flex items-center gap-3 flex-shrink-0">
-              {/* External links – lg+ only */}
-              <div className="hidden lg:flex items-center gap-4 pr-4 border-r border-white/10">
-                {externalLinks.map((el) => (
-                  <a
-                    key={el.label}
-                    href={el.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[10px] font-display font-medium tracking-widest uppercase text-az-muted hover:text-gold transition-colors duration-200 whitespace-nowrap"
-                  >
-                    {el.label}
-                  </a>
-                ))}
+              {/* Brand chip links – lg+ only */}
+              <div className="hidden lg:flex items-center gap-2 pr-4 border-r border-white/10">
+                <a
+                  href="https://careerzenith.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/12 hover:border-blue-400/40 transition-all duration-200 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 group-hover:bg-cyan flex-shrink-0" />
+                  <span className="text-[10px] font-display font-semibold text-blue-300/70 group-hover:text-blue-200 tracking-wide whitespace-nowrap">CareerZenith</span>
+                </a>
+                <a
+                  href="https://maang.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/15 bg-gold/[0.04] hover:bg-gold/[0.09] hover:border-gold/35 transition-all duration-200 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/70 group-hover:bg-gold flex-shrink-0" />
+                  <span className="text-[10px] font-display font-semibold text-gold/60 group-hover:text-gold tracking-wide whitespace-nowrap">AlgoZenith</span>
+                </a>
               </div>
+
 
               {/* Apply Now – always visible */}
               <a

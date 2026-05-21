@@ -102,7 +102,7 @@ export default function HomePage() {
         ════════════════════════════════════════════════════════════════════ */}
         <section
           id="home"
-          className="relative min-h-screen lg:min-h-[85vh] flex items-center overflow-hidden pt-16 pb-8"
+          className="relative min-h-[100dvh] lg:min-h-[85vh] flex items-center overflow-hidden pt-16"
         >
           {/* Layered background */}
           <div className="absolute inset-0 dot-grid opacity-50" aria-hidden="true" />
@@ -122,68 +122,136 @@ export default function HomePage() {
           {/* Watermark */}
           <AZWatermark size={520} opacity={0.025} rotate={-12} className="-bottom-20 -right-20" />
 
-          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-12 xl:gap-20 items-center">
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 lg:py-20">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 xl:gap-20 items-center">
 
-              {/* ── Left — copy ───────────────────────────────────────────── */}
+              {/* ── Left — copy ──────────────────────────────────────────── */}
               <div>
+
+                {/* Mobile-only: compact image strip */}
+                <div className="lg:hidden mb-6 relative h-40 rounded-2xl overflow-hidden az-image-frame animate-fade-up">
+                  <Image
+                    src="/hero/az-team.jpeg"
+                    alt="AZ CCP team"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    sizes="100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-az-bg via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-4 flex items-center gap-2">
+                    <span className="px-2 py-0.5 rounded-full bg-gold/90 text-az-bg text-[9px] font-display font-black tracking-wider">
+                      AZ CCP
+                    </span>
+                    <span className="text-white/60 text-[10px] font-display tracking-wide">80+ Campuses Nationwide</span>
+                  </div>
+                </div>
+
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/20 bg-gold/[0.06] mb-4 animate-fade-up">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
+                  <span className="text-[10px] font-display font-semibold text-gold/80 tracking-widest uppercase">Applications Open</span>
+                </div>
+
                 {/* Main heading */}
-                <h1 className="font-display font-extrabold leading-tight text-white animate-fade-up delay-100 text-[clamp(2.2rem,5.5vw,4.2rem)] tracking-tight">
-                  AlgoZenith <span className="text-gradient-gold">Campus Connection</span> Program
+                <h1 className="font-display font-extrabold leading-[1.08] text-white animate-fade-up delay-100 text-[clamp(2rem,8vw,4.2rem)] tracking-tight">
+                  AlgoZenith{" "}
+                  <span className="text-gradient-gold">Campus<br className="sm:hidden" /> Connection</span>{" "}
+                  Program
                 </h1>
 
-                <p className="mt-6 text-base md:text-lg text-gray-400 max-w-lg leading-relaxed font-light animate-fade-up delay-200">
+                <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-400 max-w-lg leading-relaxed font-light animate-fade-up delay-200">
                   Building a nationwide community of student leaders who code, collaborate, and
                   transform their campuses — one chapter at a time.
                 </p>
 
-                {/* CTAs */}
-                <div className="mt-8 flex flex-col gap-3.5 animate-fade-up delay-300">
-                  <div className="flex flex-wrap gap-3.5">
+                {/* ── CTAs ─────────────────────────────────────────── */}
+                <div className="mt-7 flex flex-col gap-4 animate-fade-up delay-300">
+
+                  {/* Primary CTA row — always side-by-side */}
+                  <div className="flex flex-row flex-wrap gap-2.5">
                     <a
                       href="https://forms.gle/HpedZoLqd7puN1hPA"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="az-btn-gold !py-3 !px-7 text-xs sm:text-sm"
+                      className="az-btn-gold !py-2.5 !px-5 !text-[11px] sm:!text-sm flex-shrink-0"
                     >
-                      Apply to Lead
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      Apply Now
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </a>
-                    <a href="#benefits" className="az-btn-outline !py-3 !px-7 text-xs sm:text-sm">
-                      Explore
+                    <a href="#benefits" className="az-btn-outline !py-2.5 !px-5 !text-[11px] sm:!text-sm flex-shrink-0">
+                      Explore Program
                     </a>
                   </div>
-                  <div className="flex flex-wrap gap-3.5">
+
+                  {/* Platform cards — horizontal scroll on mobile, wrap on wider */}
+                  <div className="flex flex-row gap-2.5 overflow-x-auto hide-scrollbar pb-0.5">
+
+                    {/* CareerZenith — career & placements (PRIMARY focus) */}
+                    <a
+                      href="https://careerzenith.ai/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="platform-card-cz group flex-shrink-0"
+                    >
+                      <div className="platform-card-icon-cz">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <span className="text-xs font-display font-bold text-white leading-tight">CareerZenith</span>
+                        <span className="text-[10px] text-blue-300/70 font-medium">AI Resume &amp; Placements</span>
+                      </div>
+                      <svg className="w-3 h-3 text-white/30 group-hover:text-white/70 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+
+                    {/* AlgoZenith — DSA & coding prep */}
                     <a
                       href="https://maang.in"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="az-btn-blue !py-3 !px-7 text-xs sm:text-sm font-bold"
+                      className="platform-card-az group flex-shrink-0"
                     >
-                      Join the Community
+                      <div className="platform-card-icon-az">
+                        <Image
+                          src="/brand/az-logo.png"
+                          alt="AlgoZenith"
+                          width={16}
+                          height={16}
+                          className="object-contain"
+                        />
+                      </div>
+                      <div className="flex flex-col items-start">
+                        <span className="text-xs font-display font-bold text-gold leading-tight">AlgoZenith</span>
+                        <span className="text-[10px] text-gold/50 font-medium">DSA &amp; Interview Prep</span>
+                      </div>
+                      <svg className="w-3 h-3 text-white/20 group-hover:text-gold/60 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
                     </a>
-                    <a href="#events" className="az-btn-outline !py-3 !px-7 text-xs sm:text-sm">
-                      Explore Community Events
-                    </a>
+
                   </div>
                 </div>
 
-                {/* ── Stats scoreboard ──────────────────────────────────── */}
-                <div className="mt-8 pt-6 border-t border-white/[0.06] grid grid-cols-3 gap-6 animate-fade-up delay-400">
+                {/* ── Stats scoreboard ─────────────────────────────── */}
+                <div className="mt-8 pt-5 border-t border-white/[0.06] grid grid-cols-3 gap-4 animate-fade-up delay-400">
                   {stats.map((s) => (
                     <div key={s.label}>
-                      <div className="font-display font-black text-3xl md:text-4xl text-white">
+                      <div className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-white">
                         {s.value}
                       </div>
-                      <div className="mt-1.5 section-tag opacity-70">{s.label}</div>
+                      <div className="mt-1 section-tag opacity-70 text-[9px] sm:text-[0.6rem]">{s.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* ── Right — image collage ────────────────────────────────── */}
+              {/* ── Right — image collage (desktop only) ─────────── */}
               <div className="hidden lg:block animate-fade-up delay-200">
                 <div className="animate-float">
                   <div className="az-image-frame rounded-2xl p-3">
@@ -241,6 +309,7 @@ export default function HomePage() {
           {/* Bottom fade */}
           <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-az-bg to-transparent pointer-events-none" />
         </section>
+
 
         {/* ════════════════════════════════════════════════════════════════════
             BENEFITS

@@ -30,7 +30,15 @@ const TYPE_COLOR: Record<string, string> = {
 };
 
 export default async function AdminEventsPage() {
-  const events = await prisma.event.findMany({ orderBy: { id: "desc" } });
+  let events: any[] = [];
+  let dbError: string | null = null;
+
+  try {
+    events = await prisma.event.findMany({ orderBy: { id: "desc" } });
+  } catch (err: any) {
+    console.error("DB connection error:", err);
+    dbError = "Cannot reach database. Check your network and DATABASE_URL in .env.local.";
+  }
 
   return (
     <div className="space-y-8">
@@ -76,6 +84,20 @@ export default async function AdminEventsPage() {
           New Event
         </Link>
       </div>
+
+      {dbError && (
+        <div className="rounded-2xl p-4 bg-red-950/20 border border-red-500/30 flex items-start gap-3 backdrop-blur-md">
+          <svg className="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <div>
+            <h4 className="text-sm font-bold text-red-200">Database Offline / Connection Failure</h4>
+            <p className="text-xs text-red-400/80 mt-1">
+              Could not connect to the database (fetch failed). Showing offline mock events. Please check your network connection or <code>DATABASE_URL</code> in <code>.env.local</code>.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Events list */}
       {events.length === 0 ? (

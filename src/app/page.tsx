@@ -56,8 +56,8 @@ const benefits = [
 
 const applicationSteps = [
   { title: "Application Review",             desc: "We review your application to assess leadership potential and program fit."                             },
-  { title: "Phone Interaction",              desc: "Shortlisted candidates get a quick call to discuss motivation and interest."                           },
-  { title: "1:1 Video Interview & Onboarding", desc: "Finalists attend a 20–25 min interview, and selected leads are onboarded into AZ CCP."                },
+  { title: "Program Round / Task Round",     desc: "Shortlisted candidates participate in practical tasks to demonstrate their execution skills."           },
+  { title: "If required, One-on-One Session", desc: "Finalists attend a short session to align on chapter goals and onboarding."                         },
 ];
 
 const faqs = [
@@ -102,7 +102,7 @@ export default function HomePage() {
         ════════════════════════════════════════════════════════════════════ */}
         <section
           id="home"
-          className="relative min-h-screen flex items-center overflow-hidden pt-16"
+          className="relative min-h-screen lg:min-h-[85vh] flex items-center overflow-hidden pt-16 pb-8"
         >
           {/* Layered background */}
           <div className="absolute inset-0 dot-grid opacity-50" aria-hidden="true" />
@@ -127,55 +127,51 @@ export default function HomePage() {
 
               {/* ── Left — copy ───────────────────────────────────────────── */}
               <div>
-                {/* Terminal tag */}
-                <div className="inline-flex items-center gap-2.5 mb-10 animate-fade-up">
-                  <span className="w-2 h-2 rounded-full bg-gold" style={{ animation: "glow-pulse 2s ease-in-out infinite" }} />
-                  <span className="font-mono text-[0.65rem] tracking-[0.28em] text-gold/80 uppercase">
-                    &gt; AZ Campus Connect {currentYear}
-                  </span>
-                </div>
-
                 {/* Main heading */}
-                <h1 className="font-display font-black leading-[0.85] animate-fade-up delay-100">
-                  <span className="block text-[clamp(3rem,8vw,6rem)] text-gradient-gold">
-                    AlgoZenith
-                  </span>
-                  <span className="block text-[clamp(2.6rem,7vw,5.5rem)] text-white">
-                    Campus
-                  </span>
-                  <span className="block text-[clamp(2.2rem,6vw,4.8rem)] text-white">
-                    Connection
-                  </span>
-                  <span className="block text-[clamp(1.8rem,5vw,4rem)] text-outlined">
-                    Program
-                  </span>
+                <h1 className="font-display font-extrabold leading-tight text-white animate-fade-up delay-100 text-[clamp(2.2rem,5.5vw,4.2rem)] tracking-tight">
+                  AlgoZenith <span className="text-gradient-gold">Campus Connection</span> Program
                 </h1>
 
-                <p className="mt-8 text-base md:text-lg text-gray-400 max-w-lg leading-relaxed font-light animate-fade-up delay-200">
+                <p className="mt-6 text-base md:text-lg text-gray-400 max-w-lg leading-relaxed font-light animate-fade-up delay-200">
                   Building a nationwide community of student leaders who code, collaborate, and
                   transform their campuses — one chapter at a time.
                 </p>
 
                 {/* CTAs */}
-                <div className="mt-10 flex flex-wrap gap-4 animate-fade-up delay-300">
-                  <a
-                    href="https://forms.gle/HpedZoLqd7puN1hPA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="az-btn-gold"
-                  >
-                    Apply to Lead
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
-                  <a href="#benefits" className="az-btn-outline">
-                    Explore Benefits
-                  </a>
+                <div className="mt-8 flex flex-col gap-3.5 animate-fade-up delay-300">
+                  <div className="flex flex-wrap gap-3.5">
+                    <a
+                      href="https://forms.gle/HpedZoLqd7puN1hPA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="az-btn-gold !py-3 !px-7 text-xs sm:text-sm"
+                    >
+                      Apply to Lead
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </a>
+                    <a href="#benefits" className="az-btn-outline !py-3 !px-7 text-xs sm:text-sm">
+                      Explore
+                    </a>
+                  </div>
+                  <div className="flex flex-wrap gap-3.5">
+                    <a
+                      href="https://maang.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="az-btn-blue !py-3 !px-7 text-xs sm:text-sm font-bold"
+                    >
+                      Join the Community
+                    </a>
+                    <a href="#events" className="az-btn-outline !py-3 !px-7 text-xs sm:text-sm">
+                      Explore Community Events
+                    </a>
+                  </div>
                 </div>
 
                 {/* ── Stats scoreboard ──────────────────────────────────── */}
-                <div className="mt-14 pt-8 border-t border-white/[0.06] grid grid-cols-3 gap-6 animate-fade-up delay-400">
+                <div className="mt-8 pt-6 border-t border-white/[0.06] grid grid-cols-3 gap-6 animate-fade-up delay-400">
                   {stats.map((s) => (
                     <div key={s.label}>
                       <div className="font-display font-black text-3xl md:text-4xl text-white">

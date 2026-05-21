@@ -1,18 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AZWatermark from "@/components/AZWatermark";
 import { events, TYPE_COLORS, STATUS_CONFIG, type AZEvent } from "@/data/events";
-
-type Tab = "all" | "live" | "upcoming" | "past";
-const TABS: { key: Tab; label: string }[] = [
-  { key: "all",      label: "All Events" },
-  { key: "live",     label: "Live"       },
-  { key: "upcoming", label: "Upcoming"   },
-  { key: "past",     label: "Past"       },
-];
 
 /* ─── Small icons ───────────────────────────────────────────────────────────── */
 const CalIcon = () => (
@@ -167,14 +158,7 @@ function EventCard({ event }: { event: AZEvent }) {
 
 /* ─── Main Section ──────────────────────────────────────────────────────────── */
 export default function EventsSection() {
-  const [activeTab, setActiveTab] = useState<Tab>("all");
-  const filtered = activeTab === "all" ? events : events.filter(e => e.status === activeTab);
-  const counts: Record<Tab, number> = {
-    all:      events.length,
-    live:     events.filter(e => e.status === "live").length,
-    upcoming: events.filter(e => e.status === "upcoming").length,
-    past:     events.filter(e => e.status === "past").length,
-  };
+  const pastEvents = events.filter(e => e.status === "past");
 
   return (
     <section id="events" className="py-24 relative overflow-hidden" style={{ background: "#0D0F1A" }}>
@@ -185,46 +169,18 @@ export default function EventsSection() {
           <div>
             <div className="section-tag mb-3">Chapter Events</div>
             <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight">
-              What&apos;s <span className="text-gradient-gold">Happening</span>
+              Past Events <span className="text-gradient-gold">Showcase</span>
             </h2>
           </div>
-          {counts.live > 0 && (
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full self-start sm:self-auto"
-              style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.25)" }}>
-              <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#EF4444", boxShadow: "0 0 8px rgba(239,68,68,0.8)", animation: "glow-pulse 1.2s ease-in-out infinite", flexShrink: 0 }} />
-              <span className="font-display text-xs text-red-400 tracking-widest uppercase font-semibold">{counts.live} Live Now</span>
-            </div>
-          )}
         </div>
 
-        <div className="flex items-center gap-1.5 mb-10 p-1 rounded-full w-fit flex-wrap"
-          style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)" }}>
-          {TABS.map(tab => {
-            const isActive = activeTab === tab.key;
-            return (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
-                className="flex items-center gap-2 px-4 py-2 rounded-full font-display text-xs font-semibold tracking-widest uppercase transition-all duration-250"
-                style={{ background: isActive ? "#FFD60A" : "transparent", color: isActive ? "#05060F" : "#5A6278", boxShadow: isActive ? "0 0 20px rgba(255,214,10,0.25)" : "none" }}
-              >
-                {tab.label}
-                <span className="rounded-full px-1.5 py-0.5 min-w-[18px] text-center font-black"
-                  style={{ fontSize: "0.55rem", background: isActive ? "rgba(5,6,15,0.2)" : "rgba(255,255,255,0.07)", color: isActive ? "#05060F" : "#3A4058" }}>
-                  {counts[tab.key]}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {filtered.length === 0 ? (
+        {pastEvents.length === 0 ? (
           <div className="text-center py-20 font-display text-sm tracking-widest uppercase" style={{ color: "#3A4058" }}>
-            No events in this category yet.
+            No past events to show yet.
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map(event => <EventCard key={event.id} event={event} />)}
+            {pastEvents.map(event => <EventCard key={event.id} event={event} />)}
           </div>
         )}
 

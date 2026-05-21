@@ -67,9 +67,9 @@ body {
 
 /* ─── Glass Navbar ─────────────────────────────────────────────────────────── */
 .glass-nav {
-  background: rgba(5, 6, 15, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(5, 6, 15, 0.82);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
   border-bottom: 1px solid rgba(255, 214, 10, 0.07);
 }
 

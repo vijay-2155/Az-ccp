@@ -40,12 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image" },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/brand/az-logo.png",  type: "image/png", sizes: "512x512" },
-    ],
-    shortcut: "/icon.svg",
-    apple:    "/brand/az-logo.png",
+    icon: "/brand/az-logo.png",
+    shortcut: "/brand/az-logo.png",
+    apple: "/brand/az-logo.png",
   },
 };
 

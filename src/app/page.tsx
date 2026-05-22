@@ -136,7 +136,7 @@ export default function HomePage() {
                     fill
                     className="object-cover object-top"
                     priority
-                    sizes="100vw"
+                    sizes="(max-width: 1024px) 100vw, 0px"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-az-bg via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-4 flex items-center gap-2">
@@ -642,7 +642,7 @@ export default function HomePage() {
             {/* Brand */}
             <div className="flex items-center gap-3 flex-shrink-0">
               <div className="relative w-10 h-10 rounded-lg overflow-hidden border border-white/10">
-                <Image src="/brand/az-logo.png" alt="AlgoZenith" fill className="object-contain p-1" />
+                <Image src="/brand/az-logo.png" alt="AlgoZenith" fill sizes="40px" className="object-contain p-1" />
               </div>
               <div>
                 <div className="font-display font-bold text-sm text-white tracking-tight">

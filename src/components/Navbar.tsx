@@ -82,6 +82,7 @@ export default function Navbar() {
                   src="/brand/az-logo.png"
                   alt="AlgoZenith"
                   fill
+                  sizes="32px"
                   className="object-contain p-1"
                   priority
                 />

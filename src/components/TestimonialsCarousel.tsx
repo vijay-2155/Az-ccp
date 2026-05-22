@@ -14,21 +14,21 @@ const testimonials = [
   {
     quote:   "During my tenure, I managed multiple teams with 40+ members and worked on organizing coding-focused initiatives that encouraged students to explore DSA, competitive programming, and technical growth. One of the most rewarding parts of this journey was successfully organizing 4 major coding events with participation from 1000+ students, which significantly increased student engagement in coding activities across the campus.",
     name:    "Aryan Bhargava",
-    college: "Indian Institute of Technology (BHU), Varanasi",
+    college: "IIIT Bhagalpur",
     photo:   "/testimonials/az testimonal leads photos/Aryan bhargava.jfif",
     cohort:  "2025/26",
   },
   {
     quote:   "Being a part of AlgoZenith has been a really valuable experience for me. It gave me the opportunity to learn new technologies, work with amazing people, and grow both technically and personally. The environment is very supportive and motivating, and it truly encourages students to explore, create, and collaborate.",
     name:    "Himanshu Makhe",
-    college: "Indian Institute of Technology, Goa",
+    college: "S B Jain Institute of Technology Management and Research",
     photo:   "/testimonials/az testimonal leads photos/himanshu satish makhe.jpg",
     cohort:  "2025/26",
   },
   {
     quote:   "Leading the AlgoZenith CCP chapter was an amazing experience. I mentored students, organized coding sessions, and helped build a strong problem-solving culture on campus. The role enhanced my leadership, communication, and technical skills while allowing me to contribute meaningfully to a collaborative and motivated competitive programming community.",
     name:    "Aastik Das",
-    college: "Indian Institute of Information Technology, Gwalior",
+    college: "Kalinga Institute of Industrial Technology",
     photo:   "/testimonials/az testimonal leads photos/astik das.JPG",
     cohort:  "2025/26",
   },
@@ -36,7 +36,7 @@ const testimonials = [
   {
     quote:   "From handling responsibilities to managing community tasks and events, every experience helped me improve my communication, leadership, teamwork, and networking skills. It never felt like just another student community.. it felt like a space filled with motivated people who genuinely wanted to learn and help each other grow.",
     name:    "Neelam Reethika",
-    college: "National Institute of Technology, Calicut",
+    college: "Vignan's Institute of Engineering for Women",
     photo:   "/testimonials/az testimonal leads photos/neelam reethika.jpg",
     cohort:  "2025/26",
   },

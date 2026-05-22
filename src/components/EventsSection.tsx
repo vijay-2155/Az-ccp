@@ -156,14 +156,14 @@ export default function EventsSection() {
           <div>
             <div className="section-tag mb-3">Chapter Events</div>
             <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight">
-              Past Events <span className="text-gradient-gold">Showcase</span>
+              Events <span className="text-gradient-gold">Showcase</span>
             </h2>
           </div>
         </div>
 
         {pastEvents.length === 0 ? (
           <div className="text-center py-20 font-display text-sm tracking-widest uppercase" style={{ color: "#3A4058" }}>
-            No past events to show yet.
+            No events to show yet.
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

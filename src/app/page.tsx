@@ -55,9 +55,9 @@ const benefits = [
 ];
 
 const applicationSteps = [
-  { title: "Application Review",             desc: "We review your application to assess leadership potential and program fit."                             },
-  { title: "Program Round / Task Round",     desc: "Shortlisted candidates participate in practical tasks to demonstrate their execution skills."           },
-  { title: "If required, One-on-One Session", desc: "Finalists attend a short session to align on chapter goals and onboarding."                         },
+  { title: "Application Review",   desc: "We review your application to assess leadership potential and program fit."           },
+  { title: "Task Execution Round", desc: "Shortlisted candidates participate in practical tasks to demonstrate their execution skills." },
+  { title: "1:1 Interview",        desc: "Finalists attend a short session to align on chapter goals and onboarding."           },
 ];
 
 const faqs = [
@@ -161,7 +161,7 @@ export default function HomePage() {
                 </h1>
 
                 <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-400 max-w-lg leading-relaxed font-light animate-fade-up delay-200">
-                  Building a nationwide community of student leaders who code, collaborate, and
+                  Building a nationwide community of student leaders who collaborate and
                   transform their campuses — one chapter at a time.
                 </p>
 
@@ -186,56 +186,6 @@ export default function HomePage() {
                     </a>
                   </div>
 
-                  {/* Platform cards — horizontal scroll on mobile, wrap on wider */}
-                  <div className="flex flex-row gap-2.5 overflow-x-auto hide-scrollbar pb-0.5">
-
-                    {/* CareerZenith — career & placements (PRIMARY focus) */}
-                    <a
-                      href="https://careerzenith.ai/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="platform-card-cz group flex-shrink-0"
-                    >
-                      <div className="platform-card-icon-cz">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-4 h-4">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <span className="text-xs font-display font-bold text-white leading-tight">CareerZenith</span>
-                        <span className="text-[10px] text-blue-300/70 font-medium">AI Resume &amp; Placements</span>
-                      </div>
-                      <svg className="w-3 h-3 text-white/30 group-hover:text-white/70 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-
-                    {/* AlgoZenith — DSA & coding prep */}
-                    <a
-                      href="https://maang.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="platform-card-az group flex-shrink-0"
-                    >
-                      <div className="platform-card-icon-az">
-                        <Image
-                          src="/brand/az-logo.png"
-                          alt="AlgoZenith"
-                          width={16}
-                          height={16}
-                          className="object-contain"
-                        />
-                      </div>
-                      <div className="flex flex-col items-start">
-                        <span className="text-xs font-display font-bold text-gold leading-tight">AlgoZenith</span>
-                        <span className="text-[10px] text-gold/50 font-medium">DSA &amp; Interview Prep</span>
-                      </div>
-                      <svg className="w-3 h-3 text-white/20 group-hover:text-gold/60 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-
-                  </div>
                 </div>
 
                 {/* ── Stats scoreboard ─────────────────────────────── */}
@@ -294,7 +244,7 @@ export default function HomePage() {
                   </div>
                   {/* Contact pill */}
                   <div className="mt-4 text-right">
-                    <a href="mailto:campusconnect@algozenit.com" className="az-btn-blue !text-xs">
+                    <a href="mailto:campusconnect@algozenith.com" className="az-btn-blue !text-xs">
                       <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
@@ -312,6 +262,79 @@ export default function HomePage() {
 
 
         {/* ════════════════════════════════════════════════════════════════════
+            OUR INITIATIVES
+        ════════════════════════════════════════════════════════════════════ */}
+        <section id="initiatives" className="py-20 relative overflow-hidden" style={{ background: "#0A0B15" }}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div className="mb-12 text-center">
+              <div className="section-tag mb-3 inline-block">What We Do</div>
+              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
+                Our <span className="text-gradient-gold">Initiatives</span>
+              </h2>
+              <p className="mt-4 text-gray-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
+                From campus coding contests to career mentorship, AZ CCP chapters drive impactful, year-round initiatives that shape future tech leaders.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  ),
+                  title: "Coding Contests",
+                  desc: "Organize competitive programming events and hackathons that challenge and excite the campus tech community.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  ),
+                  title: "DSA Workshops",
+                  desc: "Run weekly or monthly hands-on sessions on data structures, algorithms, and problem-solving with expert guidance.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  ),
+                  title: "Webinars & Talks",
+                  desc: "Invite industry professionals and AlgoZenith mentors to share real-world insights, career paths, and interview tips.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  ),
+                  title: "Career Guidance",
+                  desc: "Host resume-building seminars, mock interviews, and placement prep sessions to help students land their dream roles.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="az-card rounded-2xl p-6 group relative overflow-hidden"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5 group-hover:bg-gold/15 group-hover:border-gold/35 transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-display font-bold text-sm text-white mb-2 group-hover:text-gold transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs leading-relaxed font-light">{item.desc}</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════════════
             BENEFITS
         ════════════════════════════════════════════════════════════════════ */}
         <section id="benefits" className="py-24 relative overflow-hidden" style={{ background: "#0D0F1A" }}>
@@ -320,7 +343,6 @@ export default function HomePage() {
 
             {/* Section header */}
             <div className="mb-16">
-              <div className="section-tag mb-3">Why Lead?</div>
               <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight max-w-xl">
                 Why Become a{" "}
                 <span className="text-gradient-gold">Chapter Lead?</span>
@@ -546,7 +568,7 @@ export default function HomePage() {
                   >
                     Apply Now &amp; Lead
                   </a>
-                  <a href="mailto:campusconnect@algozenit.com" className="az-btn-outline">
+                  <a href="mailto:campusconnect@algozenith.com" className="az-btn-outline">
                     Contact Us
                   </a>
                 </div>
@@ -598,10 +620,10 @@ export default function HomePage() {
             <p className="mt-8 text-center text-xs text-gray-600">
               Still have questions?{" "}
               <a
-                href="mailto:campusconnect@algozenit.com"
+                href="mailto:campusconnect@algozenith.com"
                 className="text-cyan hover:text-white transition-colors"
               >
-                campusconnect@algozenit.com
+                campusconnect@algozenith.com
               </a>
             </p>
           </div>
@@ -612,27 +634,32 @@ export default function HomePage() {
           FOOTER
       ════════════════════════════════════════════════════════════════════ */}
       <footer style={{ background: "#02030A" }} className="border-t border-white/[0.04]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+          {/* Top row: brand + nav + socials */}
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-8">
+
             {/* Brand */}
-            <div className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-lg overflow-hidden border border-white/10">
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden border border-white/10">
                 <Image src="/brand/az-logo.png" alt="AlgoZenith" fill className="object-contain p-1" />
               </div>
               <div>
-                <div className="font-display font-bold text-xs text-white tracking-tight">
-                  AZ <span className="text-gold">CCP</span>
+                <div className="font-display font-bold text-sm text-white tracking-tight">
+                  AlgoZenith <span className="text-gold">CCP</span>
                 </div>
-                <div className="text-gray-600 text-[0.6rem] tracking-widest uppercase">AlgoZenith</div>
+                <div className="text-gray-600 text-[0.6rem] tracking-widest uppercase">Campus Connection Program</div>
               </div>
             </div>
 
-            {/* Links */}
-            <div className="flex items-center gap-6">
+            {/* Nav links */}
+            <div className="flex flex-wrap items-center gap-5">
               {[
-                { href: "#benefits", label: "Benefits" },
-                { href: "#mission",  label: "Mission"  },
-                { href: "#faq",      label: "FAQ"      },
+                { href: "#benefits",     label: "Benefits"     },
+                { href: "#mission",      label: "Mission"      },
+                { href: "#testimonials", label: "Testimonials" },
+                { href: "#events",       label: "Events"       },
+                { href: "#faq",          label: "FAQ"          },
               ].map((l) => (
                 <a
                   key={l.href}
@@ -644,11 +671,51 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Copyright */}
-            <p className="text-gray-700 text-[0.65rem] tracking-wide">
-              &copy; {currentYear} Algozenith Technologies Pvt. Ltd.
-            </p>
+            {/* Social icons — AlgoZenith only */}
+            <div className="flex items-center gap-3">
+              <a href="https://www.linkedin.com/company/algozenith/" target="_blank" rel="noopener noreferrer" aria-label="AlgoZenith LinkedIn"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 text-gray-600 hover:text-white hover:border-white/25 transition-all duration-200">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/algozenith/" target="_blank" rel="noopener noreferrer" aria-label="AlgoZenith Instagram"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 text-gray-600 hover:text-white hover:border-white/25 transition-all duration-200">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/algozenith" target="_blank" rel="noopener noreferrer" aria-label="AlgoZenith Twitter/X"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 text-gray-600 hover:text-white hover:border-white/25 transition-all duration-200">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://www.youtube.com/@AlgoZenith" target="_blank" rel="noopener noreferrer" aria-label="AlgoZenith YouTube"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-white/10 text-gray-600 hover:text-white hover:border-white/25 transition-all duration-200">
+                <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+            </div>
           </div>
+
+          {/* Divider */}
+          <div className="h-px bg-white/[0.05] mb-6" />
+
+          {/* Bottom: copyright + email */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-gray-700 text-[0.65rem] tracking-wide text-center sm:text-left">
+              &copy; {currentYear} Algozenith Technologies Pvt. Ltd. All rights reserved.
+            </p>
+            <a
+              href="mailto:campusconnect@algozenith.com"
+              className="text-[0.65rem] text-gray-700 hover:text-gold transition-colors tracking-wide"
+            >
+              campusconnect@algozenith.com
+            </a>
+          </div>
+
         </div>
       </footer>
     </>

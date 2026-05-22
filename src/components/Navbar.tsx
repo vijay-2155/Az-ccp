@@ -4,18 +4,16 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const navLinks = [
+  { href: "#initiatives",  label: "Initiatives"  },
   { href: "#benefits",     label: "Benefits"      },
-  { href: "#peek",         label: "Sneak Peek"    },
+  { href: "#peek",         label: "Gallery"       },
   { href: "#mission",      label: "Mission"       },
   { href: "#events",       label: "Events"        },
   { href: "#testimonials", label: "Testimonials"  },
   { href: "#faq",          label: "FAQs"          },
 ];
 
-const externalLinks = [
-  { href: "https://maang.in", label: "AlgoZenith"    },
-  { href: "https://maang.in", label: "CareerZenith"  },
-];
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen]     = useState(false);
@@ -78,8 +76,8 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
 
             {/* ── Logo ───────────────────────────────────────── */}
-            <a href="#home" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="relative w-9 h-9 rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/40 transition-colors duration-300">
+            <a href="#home" className="flex items-center gap-2.5 group flex-shrink-0">
+              <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/40 transition-colors duration-300">
                 <Image
                   src="/brand/az-logo.png"
                   alt="AlgoZenith"
@@ -88,9 +86,12 @@ export default function Navbar() {
                   priority
                 />
               </div>
-              <span className="font-display font-bold text-sm text-white hidden sm:block tracking-tight">
-                AZ <span className="text-gold">CCP</span>
-              </span>
+              <div className="hidden sm:block">
+                <span className="font-display font-bold text-xs text-white tracking-tight leading-none block">
+                  AlgoZenith <span className="text-gold">CCP</span>
+                </span>
+                <span className="font-display text-[0.55rem] text-gray-600 tracking-widest uppercase leading-none block mt-0.5">Campus Connect</span>
+              </div>
             </a>
 
             {/* ── Desktop pill nav ───────────────────────────── */}
@@ -122,27 +123,6 @@ export default function Navbar() {
 
             {/* ── Right-side CTAs ────────────────────────────── */}
             <div className="flex items-center gap-3 flex-shrink-0">
-              {/* Brand chip links – lg+ only */}
-              <div className="hidden lg:flex items-center gap-2 pr-4 border-r border-white/10">
-                <a
-                  href="https://careerzenith.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/12 hover:border-blue-400/40 transition-all duration-200 group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 group-hover:bg-cyan flex-shrink-0" />
-                  <span className="text-[10px] font-display font-semibold text-blue-300/70 group-hover:text-blue-200 tracking-wide whitespace-nowrap">CareerZenith</span>
-                </a>
-                <a
-                  href="https://maang.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/15 bg-gold/[0.04] hover:bg-gold/[0.09] hover:border-gold/35 transition-all duration-200 group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold/70 group-hover:bg-gold flex-shrink-0" />
-                  <span className="text-[10px] font-display font-semibold text-gold/60 group-hover:text-gold tracking-wide whitespace-nowrap">AlgoZenith</span>
-                </a>
-              </div>
 
 
               {/* Apply Now – always visible */}
@@ -242,24 +222,8 @@ export default function Navbar() {
           {/* Divider */}
           <div className="h-px bg-white/5 mx-4" />
 
-          {/* External + Apply */}
-          <div className="p-3 flex flex-col gap-0.5">
-            {externalLinks.map((el) => (
-              <a
-                key={el.label}
-                href={el.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={closeMenu}
-                className="flex items-center justify-between px-4 py-3 rounded-xl text-[11px] font-display uppercase tracking-widest text-az-muted hover:text-white hover:bg-white/5 transition-all duration-200"
-              >
-                {el.label}
-                <svg className="w-3 h-3 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            ))}
-
+          {/* Apply */}
+          <div className="p-3">
             <a
               href="https://forms.gle/HpedZoLqd7puN1hPA"
               target="_blank"
@@ -270,6 +234,7 @@ export default function Navbar() {
               Apply Now →
             </a>
           </div>
+
         </div>
       </div>
     </>

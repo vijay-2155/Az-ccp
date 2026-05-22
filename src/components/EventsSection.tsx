@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AZWatermark from "@/components/AZWatermark";
-import { events, TYPE_COLORS, STATUS_CONFIG, type AZEvent } from "@/data/events";
+import { events, type AZEvent } from "@/data/events";
 
 /* ─── Small icons ───────────────────────────────────────────────────────────── */
 const CalIcon = () => (
@@ -25,8 +25,6 @@ const PinIcon = () => (
 
 /* ─── Event Card ────────────────────────────────────────────────────────────── */
 function EventCard({ event }: { event: AZEvent }) {
-  const sc  = STATUS_CONFIG[event.status];
-  const tc  = TYPE_COLORS[event.type] ?? { bg: "rgba(255,255,255,0.08)", text: "#9CA3AF" };
   const isPast = event.status === "past";
 
   return (
@@ -34,7 +32,7 @@ function EventCard({ event }: { event: AZEvent }) {
       className="rounded-2xl overflow-hidden flex flex-col group"
       style={{
         background: "linear-gradient(145deg,#111320,#0D0F1A)",
-        border:     `1px solid ${sc.borderColor}`,
+        border:     "1px solid rgba(255,255,255,0.06)",
         transition: "transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.35s ease",
       }}
       onMouseEnter={e => {
@@ -64,26 +62,15 @@ function EventCard({ event }: { event: AZEvent }) {
           style={{ background: "linear-gradient(to bottom, rgba(5,6,15,0.1) 0%, rgba(17,19,32,0.98) 100%)" }}
         />
         <div className="absolute inset-x-0 top-0 flex items-start justify-between p-3">
+          {/* College name chip instead of status/type tags */}
           <div
             className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full backdrop-blur-md"
-            style={{ background: "rgba(5,6,15,0.55)", border: `1px solid ${sc.borderColor}` }}
+            style={{ background: "rgba(5,6,15,0.60)", border: "1px solid rgba(255,255,255,0.08)" }}
           >
-            <span style={{
-              width: 6, height: 6, borderRadius: "50%",
-              background: sc.dotColor, flexShrink: 0,
-              boxShadow:   event.status === "live" ? `0 0 8px ${sc.dotColor}` : "none",
-              animation:   event.status === "live" ? "glow-pulse 1.2s ease-in-out infinite" : undefined,
-            }} />
-            <span className="font-display font-semibold tracking-widest uppercase" style={{ fontSize: "0.58rem", color: sc.dotColor }}>
-              {sc.label}
+            <span className="font-display font-semibold tracking-wider" style={{ fontSize: "0.58rem", color: "#9AA3BA" }}>
+              {event.college}
             </span>
           </div>
-          <span
-            className="font-display font-semibold tracking-wider uppercase px-2.5 py-1.5 rounded-full backdrop-blur-md"
-            style={{ fontSize: "0.58rem", background: tc.bg, color: tc.text, border: `1px solid ${tc.text}26` }}
-          >
-            {event.type}
-          </span>
         </div>
         {event.status === "live" && (
           <div
@@ -140,11 +127,11 @@ function EventCard({ event }: { event: AZEvent }) {
             border:     "1px solid rgba(255,255,255,0.08)",
             color:      isPast ? "#5A6278" : "#9AA3BA",
           }}
-          onMouseEnter={e => {
+          onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => {
             (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,214,10,0.25)";
             (e.currentTarget as HTMLElement).style.color       = "#FFD60A";
           }}
-          onMouseLeave={e => {
+          onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => {
             (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)";
             (e.currentTarget as HTMLElement).style.color       = isPast ? "#5A6278" : "#9AA3BA";
           }}
@@ -184,10 +171,7 @@ export default function EventsSection() {
           </div>
         )}
 
-        <div className="mt-14 text-center">
-          <p className="text-sm mb-5" style={{ color: "#3A4058" }}>Want your chapter&apos;s event listed here?</p>
-          <Link href="/admin/events/new" className="az-btn-outline !text-sm">Submit Your Event</Link>
-        </div>
+
       </div>
     </section>
   );

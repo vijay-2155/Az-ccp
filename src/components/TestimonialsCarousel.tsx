@@ -5,12 +5,6 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    quote:   "Being the AlgoZenith Chapter Lead was a wonderful experience!! It honed my leadership and technical skills. The support from the AZ team was incredible — it felt great to be part of a community that genuinely empowers coders.",
-    name:    "Shiwangi Singh",
-    college: "IIIT Bhagalpur",
-    photo:   "/testimonials/shiwangi.png",
-  },
-  {
     quote:   "From dreaming of hosting events to actually making them happen, AZ turned aspirations into reality. It taught me leadership, boosted my confidence, and proved that I can achieve anything I set my mind to.",
     name:    "Nehal Fatema",
     college: "Vignan's Institute of Information Technology",
@@ -237,7 +231,7 @@ export default function TestimonialsCarousel() {
                   style={{ background: "linear-gradient(90deg,rgba(255,214,10,0.18),rgba(255,255,255,0.04),transparent)" }}
                 />
 
-                {/* AZ tag */}
+                {/* AZ tag with year */}
                 <div className="relative z-10 mt-4 flex items-center gap-2">
                   <div
                     className="w-1.5 h-1.5 rounded-full"
@@ -247,7 +241,7 @@ export default function TestimonialsCarousel() {
                     className="font-display uppercase tracking-widest"
                     style={{ fontSize: "0.55rem", color: "rgba(255,214,10,0.55)" }}
                   >
-                    AZ Campus Lead
+                    AZ Campus Lead &mdash; 2024/25
                   </span>
                 </div>
               </div>

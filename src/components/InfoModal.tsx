@@ -43,8 +43,8 @@ const modalData: Record<ModalType, { title: string; content: React.ReactNode }> 
         {[
           "Must be enrolled in a recognized institution in India pursuing BTech, MTech, BCA, or MCA.",
           "Students in integrated programs (BTech+MTech, BCA+MCA) are also eligible.",
-          "First-year students are not eligible to apply.",
-          "Final-year students are not eligible to apply.",
+          "First-year students are NOT eligible to apply.",
+          "Final-year students are NOT eligible to apply.",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3 text-sm">
             <span className="mt-1 w-4 h-4 flex-shrink-0 rounded-full bg-gold/10 border border-gold/30 flex items-center justify-center">

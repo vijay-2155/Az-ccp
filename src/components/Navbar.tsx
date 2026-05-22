@@ -76,22 +76,16 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16">
 
             {/* ── Logo ───────────────────────────────────────── */}
-            <a href="#home" className="flex items-center gap-2.5 group flex-shrink-0">
-              <div className="relative w-8 h-8 rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/40 transition-colors duration-300">
+            <a href="#home" className="flex items-center group flex-shrink-0">
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden border border-white/10 group-hover:border-gold/40 transition-colors duration-300">
                 <Image
                   src="/brand/az-logo.png"
                   alt="AlgoZenith"
                   fill
-                  sizes="32px"
+                  sizes="40px"
                   className="object-contain p-1"
                   priority
                 />
-              </div>
-              <div className="hidden sm:block">
-                <span className="font-display font-bold text-xs text-white tracking-tight leading-none block">
-                  AlgoZenith <span className="text-gold">CCP</span>
-                </span>
-                <span className="font-display text-[0.55rem] text-gray-600 tracking-widest uppercase leading-none block mt-0.5">Campus Connect</span>
               </div>
             </a>
 
@@ -124,7 +118,27 @@ export default function Navbar() {
 
             {/* ── Right-side CTAs ────────────────────────────── */}
             <div className="flex items-center gap-3 flex-shrink-0">
-
+              {/* Brand chip links – hidden on mobile, visible on lg+ */}
+              <div className="hidden lg:flex items-center gap-2 pr-4 border-r border-white/10">
+                <a
+                  href="https://maang.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gold/15 bg-gold/[0.04] hover:bg-gold/[0.09] hover:border-gold/35 transition-all duration-200 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold/70 group-hover:bg-gold flex-shrink-0" />
+                  <span className="text-[10px] font-display font-semibold text-gold/60 group-hover:text-gold tracking-wide whitespace-nowrap">AlgoZenith</span>
+                </a>
+                <a
+                  href="https://careerzenith.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/12 hover:border-blue-400/40 transition-all duration-200 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 group-hover:bg-cyan flex-shrink-0" />
+                  <span className="text-[10px] font-display font-semibold text-blue-300/70 group-hover:text-blue-200 tracking-wide whitespace-nowrap">CareerZenith</span>
+                </a>
+              </div>
 
               {/* Apply Now – always visible */}
               <a
@@ -222,6 +236,30 @@ export default function Navbar() {
 
           {/* Divider */}
           <div className="h-px bg-white/5 mx-4" />
+
+          {/* Brand links */}
+          <div className="p-3 pt-0 flex gap-2">
+            <a
+              href="https://maang.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-gold/15 bg-gold/[0.04] hover:bg-gold/[0.08] transition-all duration-200 text-[10px] font-display font-bold text-gold/75 tracking-wider uppercase"
+            >
+              <span className="w-1 h-1 rounded-full bg-gold" />
+              AlgoZenith
+            </a>
+            <a
+              href="https://careerzenith.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMenu}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl border border-blue-500/20 bg-blue-500/5 hover:bg-blue-500/10 transition-all duration-200 text-[10px] font-display font-bold text-blue-400 tracking-wider uppercase"
+            >
+              <span className="w-1 h-1 rounded-full bg-blue-400" />
+              CareerZenith
+            </a>
+          </div>
 
           {/* Apply */}
           <div className="p-3">

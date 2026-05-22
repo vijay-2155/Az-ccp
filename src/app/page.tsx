@@ -421,26 +421,7 @@ export default function HomePage() {
                   lead change on their campuses — creating meaningful impact across the student community.
                 </p>
 
-                {/* Mission pillars */}
-                <div className="mt-10 space-y-4">
-                  {[
-                    { label: "Empower",    desc: "Give students the tools to lead and grow"       },
-                    { label: "Connect",    desc: "Bridge campuses to industry and each other"      },
-                    { label: "Transform",  desc: "Build coding culture that outlasts every chapter" },
-                  ].map((p) => (
-                    <div key={p.label} className="flex items-center gap-4 group">
-                      <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center group-hover:border-gold/40 transition-colors">
-                        <span className="text-gold text-sm font-display font-bold">
-                          {p.label[0]}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="text-white font-semibold text-sm font-display">{p.label}</div>
-                        <div className="text-gray-500 text-xs">{p.desc}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+
               </div>
 
               {/* Application process */}

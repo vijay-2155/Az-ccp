@@ -4,13 +4,14 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const navLinks = [
+  { href: "#products",     label: "Products"     },
+  { href: "#benefits",     label: "Benefits"     },
+  { href: "#peek",         label: "Gallery"      },
+  { href: "#mission",      label: "Mission"      },
+  { href: "#events",       label: "Events"       },
+  { href: "#testimonials", label: "Testimonials" },
   { href: "#initiatives",  label: "Initiatives"  },
-  { href: "#benefits",     label: "Benefits"      },
-  { href: "#peek",         label: "Gallery"       },
-  { href: "#mission",      label: "Mission"       },
-  { href: "#events",       label: "Events"        },
-  { href: "#testimonials", label: "Testimonials"  },
-  { href: "#faq",          label: "FAQs"          },
+  { href: "#faq",          label: "FAQs"         },
 ];
 
 

@@ -262,63 +262,6 @@ export default function HomePage() {
 
 
         {/* ════════════════════════════════════════════════════════════════════
-            OUR INITIATIVES
-        ════════════════════════════════════════════════════════════════════ */}
-        <section id="initiatives" className="py-20 relative overflow-hidden" style={{ background: "#0A0B15" }}>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div className="mb-12 text-center">
-              <div className="section-tag mb-3 inline-block">What We Do</div>
-              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
-                Our <span className="text-gradient-gold">Initiatives</span>
-              </h2>
-              <p className="mt-4 text-gray-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
-                From campus coding contests to career mentorship, AZ CCP chapters drive impactful, year-round initiatives that shape future tech leaders.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  ),
-                  title: "Coding Contests",
-                  desc: "Organize competitive programming events and hackathons that challenge and excite the campus tech community.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  ),
-                  title: "DSA Workshops",
-                  desc: "Run weekly or monthly hands-on sessions on data structures, algorithms, and problem-solving with expert guidance.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  ),
-                  title: "Webinars & Talks",
-                  desc: "Invite industry professionals and AlgoZenith mentors to share real-world insights, career paths, and interview tips.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                  ),
-                  title: "Career Guidance",
-                  desc: "Host resume-building seminars, mock interviews, and placement prep sessions to help students land their dream roles.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="az-card rounded-2xl p-6 group relative overflow-hidden"
                 >
                   <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5 group-hover:bg-gold/15 group-hover:border-gold/35 transition-colors duration-300">
                     {item.icon}
@@ -398,6 +341,153 @@ export default function HomePage() {
               </p>
             </div>
             <SneakPeekCarousel />
+          </div>
+        </section>
+
+        {/* Our Products Section */}
+        <section id="products" className="py-24 relative overflow-hidden" style={{ background: "#05060F" }}>
+          <AZWatermark size={320} opacity={0.015} rotate={-15} className="top-1/4 right-10" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            {/* Header */}
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <div className="section-tag mb-3 mx-auto">Ecosystem</div>
+              <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight">
+                Our Flagship <span className="text-gradient-gold">Products</span>
+              </h2>
+              <p className="mt-4 text-gray-400 font-light text-sm sm:text-base leading-relaxed">
+                AlgoZenith Campus Connection Program is powered by leading platforms providing elite technical training and modern AI-driven career acceleration tools.
+              </p>
+            </div>
+
+            {/* Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              
+              {/* Left Column: AlgoZenith */}
+              <div 
+                className="group relative rounded-2xl border border-gold/10 p-8 sm:p-10 transition-all duration-500 hover:border-gold/30 hover:shadow-[0_0_40px_rgba(255,214,10,0.08)] overflow-hidden"
+                style={{ background: "linear-gradient(145deg, #0B0C15 0%, #05060F 100%)" }}
+              >
+                {/* Accent glow on top and hover background glow */}
+                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent" />
+                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-gold/5 blur-2xl group-hover:bg-gold/10 transition-all duration-500" />
+                
+                {/* Brand header block */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-gold/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/brand/az-logo.png"
+                      alt="AlgoZenith Logo"
+                      fill
+                      sizes="56px"
+                      className="object-contain p-2"
+                    />
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-[9px] font-display font-black tracking-widest uppercase">
+                      DSA & CP Platform
+                    </span>
+                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-gold transition-colors duration-300">
+                      AlgoZenith
+                    </h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-400 font-light text-sm leading-relaxed mb-8">
+                  The ultimate preparation ecosystem for Competitive Programming, Data Structures & Algorithms, and System Design. Trusted by over 50,000+ engineers to crack top-tier global product companies.
+                </p>
+
+                {/* Features list */}
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Custom interactive Learning Management System (LMS)",
+                    "Complete structured curriculum covering advanced DSA, Math, and CP",
+                    "Elite contest arena with real-time editorial codes & diagnostics"
+                  ].map((feat, idx) => (
+                    <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
+                      <span className="w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 text-gold text-[10px] font-bold">✓</span>
+                      <span className="font-light">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Button */}
+                <a
+                  href="https://maang.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gold text-black hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
+                >
+                  Explore AlgoZenith
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Right Column: CareerZenith */}
+              <div 
+                className="group relative rounded-2xl border border-blue-500/10 p-8 sm:p-10 transition-all duration-500 hover:border-blue-400/35 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] overflow-hidden"
+                style={{ background: "linear-gradient(145deg, #0B0C15 0%, #05060F 100%)" }}
+              >
+                {/* Accent glow on top and hover background glow */}
+                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/45 to-transparent" />
+                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all duration-500" />
+                
+                {/* Brand header block */}
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-blue-500/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/hero/cz.webp"
+                      alt="CareerZenith Logo"
+                      fill
+                      sizes="56px"
+                      className="object-contain p-2"
+                    />
+                  </div>
+                  <div>
+                    <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[9px] font-display font-black tracking-widest uppercase">
+                      AI Career Accelerator
+                    </span>
+                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-blue-400 transition-colors duration-300">
+                      CareerZenith
+                    </h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-400 font-light text-sm leading-relaxed mb-8">
+                  A high-octane career acceleration suite that matches student profiles directly with modern job requirements. Uses proprietary AI algorithms to optimize resume pathways and secure top-tier opportunities.
+                </p>
+
+                {/* Features list */}
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "AI-driven resume reviewer, scorer, and template optimizer",
+                    "Decentralized placement network connecting student leaders directly",
+                    "Proprietary skill-matching mapping for active internship channels"
+                  ].map((feat, idx) => (
+                    <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
+                      <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 text-blue-400 text-[10px] font-bold">✓</span>
+                      <span className="font-light">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Button */}
+                <a
+                  href="https://careerzenith.ai/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
+                >
+                  Explore CareerZenith
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
           </div>
         </section>
 
@@ -558,9 +648,78 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ════════════════════════════════════════════════════════════════════
-            FAQ
-        ════════════════════════════════════════════════════════════════════ */}
+        {/* Our Initiatives Section */}
+        <section id="initiatives" className="py-24 relative overflow-hidden" style={{ background: "#0A0B15" }}>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div className="mb-12 text-center">
+              <div className="section-tag mb-3 inline-block">What We Do</div>
+              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
+                Our <span className="text-gradient-gold">Initiatives</span>
+              </h2>
+              <p className="mt-4 text-gray-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
+                From campus coding contests to career mentorship, AZ CCP chapters drive impactful, year-round initiatives that shape future tech leaders.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  ),
+                  title: "Coding Contests",
+                  desc: "Organize competitive programming events and hackathons that challenge and excite the campus tech community.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  ),
+                  title: "DSA Workshops",
+                  desc: "Run weekly or monthly hands-on sessions on data structures, algorithms, and problem-solving with expert guidance.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  ),
+                  title: "Webinars & Talks",
+                  desc: "Invite industry professionals and AlgoZenith mentors to share real-world insights, career paths, and interview tips.",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                  ),
+                  title: "Career Guidance",
+                  desc: "Host resume-building seminars, mock interviews, and placement prep sessions to help students land their dream roles.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="az-card rounded-2xl p-6 group relative overflow-hidden"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5 group-hover:bg-gold/15 group-hover:border-gold/35 transition-colors duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-display font-bold text-sm text-white mb-2 group-hover:text-gold transition-colors duration-300">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-500 text-xs leading-relaxed font-light">{item.desc}</p>
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our FAQs */}
         <section id="faq" className="py-24 relative overflow-hidden" style={{ background: "#05060F" }}>
           <AZWatermark size={380} opacity={0.023} rotate={10} className="-top-10 -left-20" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">

@@ -39,6 +39,14 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: { card: "summary_large_image" },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/brand/az-logo.png",  type: "image/png", sizes: "512x512" },
+    ],
+    shortcut: "/icon.svg",
+    apple:    "/brand/az-logo.png",
+  },
 };
 
 export default function RootLayout({

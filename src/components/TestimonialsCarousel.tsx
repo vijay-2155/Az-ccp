@@ -4,35 +4,55 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 const testimonials = [
+   {
+    quote:   "I joined AZ as a student attending events, never imagining that one day I’d lead the same community. This journey taught me that growth starts with simply showing up. Every late-night planning call, every successful event, and every team bonding moment became memories I’ll always cherish. AZ CCP was never just a community to me — it became home.",
+    name:    "Anshika Vishwakarma",
+    college: "Vignan's Institute of Information Technology, Vizag",
+    photo:   "/testimonials/az testimonal leads photos/anshika vishwakarma.png",
+    cohort:  "2025/26",
+  },
   {
     quote:   "During my tenure, I managed multiple teams with 40+ members and worked on organizing coding-focused initiatives that encouraged students to explore DSA, competitive programming, and technical growth. One of the most rewarding parts of this journey was successfully organizing 4 major coding events with participation from 1000+ students, which significantly increased student engagement in coding activities across the campus.",
     name:    "Aryan Bhargava",
     college: "Indian Institute of Technology (BHU), Varanasi",
     photo:   "/testimonials/az testimonal leads photos/Aryan bhargava.jfif",
+    cohort:  "2025/26",
   },
   {
     quote:   "Being a part of AlgoZenith has been a really valuable experience for me. It gave me the opportunity to learn new technologies, work with amazing people, and grow both technically and personally. The environment is very supportive and motivating, and it truly encourages students to explore, create, and collaborate.",
     name:    "Himanshu Makhe",
     college: "Indian Institute of Technology, Goa",
     photo:   "/testimonials/az testimonal leads photos/himanshu satish makhe.jpg",
+    cohort:  "2025/26",
   },
   {
     quote:   "Leading the AlgoZenith CCP chapter was an amazing experience. I mentored students, organized coding sessions, and helped build a strong problem-solving culture on campus. The role enhanced my leadership, communication, and technical skills while allowing me to contribute meaningfully to a collaborative and motivated competitive programming community.",
     name:    "Aastik Das",
     college: "Indian Institute of Information Technology, Gwalior",
     photo:   "/testimonials/az testimonal leads photos/astik das.JPG",
+    cohort:  "2025/26",
   },
-  {
-    quote:   "I joined AZ as a student attending events, never imagining that one day I’d lead the same community. This journey taught me that growth starts with simply showing up. Every late-night planning call, every successful event, and every team bonding moment became memories I’ll always cherish. AZ CCP was never just a community to me — it became home.",
-    name:    "Anshika Vishwakarma",
-    college: "Kalinga Institute of Industrial Technology, Bhubaneswar",
-    photo:   "/testimonials/az testimonal leads photos/anshika vishwakarma.png",
-  },
+ 
   {
     quote:   "From handling responsibilities to managing community tasks and events, every experience helped me improve my communication, leadership, teamwork, and networking skills. It never felt like just another student community.. it felt like a space filled with motivated people who genuinely wanted to learn and help each other grow.",
     name:    "Neelam Reethika",
     college: "National Institute of Technology, Calicut",
     photo:   "/testimonials/az testimonal leads photos/neelam reethika.jpg",
+    cohort:  "2025/26",
+  },
+  {
+    quote:   "From dreaming of hosting events to actually making them happen, AZ turned aspirations into reality. It taught me leadership, boosted my confidence, and proved that I can achieve anything I set my mind to.",
+    name:    "Nehal Fatema",
+    college: "Vignan's Institute of Information Technology",
+    photo:   "/testimonials/nehal.png",
+    cohort:  "2024/25",
+  },
+  {
+    quote:   "Being a lead at AZ CCP was an experience like none other. I enhanced myself in leadership, built an entire team of talented people, and made awesome memories and connections with other AZ Leads.",
+    name:    "Kabir Dafda",
+    college: "Government Engineering College, Patan",
+    photo:   "/testimonials/kabir.png",
+    cohort:  "2024/25",
   },
 ];
 
@@ -253,7 +273,7 @@ export default function TestimonialsCarousel() {
                     className="font-display uppercase tracking-widest"
                     style={{ fontSize: "0.55rem", color: "rgba(255,214,10,0.55)" }}
                   >
-                    AZ Campus Lead &mdash; 2025/26
+                    AZ Campus Lead &mdash; {t.cohort}
                   </span>
                 </div>
               </div>

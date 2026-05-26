@@ -348,6 +348,94 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ════════════════════════════════════════════════════════════════════
+            MISSION + APPLICATION
+        ════════════════════════════════════════════════════════════════════ */}
+        <section id="mission" className="py-24 relative overflow-hidden" style={{ background: "#0D0F1A" }}>
+          <AZWatermark size={360} opacity={0.025} rotate={20} className="-bottom-10 left-1/2 -translate-x-1/2" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-center">
+
+              {/* Mission */}
+              <div>
+                <div className="section-tag mb-3">Mission</div>
+                <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight mb-6">
+                  Our <span className="text-gradient-gold">Mission</span>
+                </h2>
+                <p className="text-gray-400 leading-relaxed font-light max-w-xl">
+                  AlgoZenith Campus Connection Program bridges the gap between academic learning and
+                  industry demands. We empower students with resources, mentorship, and a platform to
+                  lead change on their campuses — creating meaningful impact across the student community.
+                </p>
+
+
+              </div>
+
+              {/* Application process */}
+              <div
+                className="rounded-2xl border border-white/[0.07] p-8"
+                style={{ background: "linear-gradient(145deg, #111320 0%, #0D0F1A 100%)" }}
+              >
+                <div className="section-tag mb-3">How to Join</div>
+                <h3 className="font-display font-bold text-xl text-white mb-8">
+                  Application Process
+                </h3>
+
+                {/* Timeline */}
+                <ol className="relative az-timeline-line space-y-8 ml-2 pl-8">
+                  {applicationSteps.map((step, i) => (
+                    <li key={step.title} className="relative">
+                      {/* Dot */}
+                      <div className="az-timeline-dot absolute -left-[42px] top-0.5" />
+                      {/* Step number */}
+                      <div className="section-tag mb-1 opacity-60">Step {i + 1}</div>
+                      <strong className="block text-white font-display font-semibold text-sm mb-1">
+                        {step.title}
+                      </strong>
+                      <span className="text-gray-400 text-xs leading-relaxed">{step.desc}</span>
+                    </li>
+                  ))}
+                </ol>
+
+                {/* Info links */}
+                <InfoModal />
+
+                {/* Apply CTA */}
+                <div className="mt-8 text-center">
+                  <a
+                    href="https://forms.gle/HpedZoLqd7puN1hPA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="az-btn-gold w-full justify-center"
+                  >
+                    Apply Now
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ════════════════════════════════════════════════════════════════════
+            TESTIMONIALS
+        ════════════════════════════════════════════════════════════════════ */}
+        <section id="testimonials" className="py-24 relative overflow-hidden" style={{ background: "#05060F" }}>
+          <AZWatermark size={440} opacity={0.022} rotate={-5} className="-bottom-16 -right-16" />
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <div className="section-tag mb-3">From Our Leads</div>
+              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
+                Words from Our{" "}
+                <span className="text-gradient-gold">Leaders</span>
+              </h2>
+            </div>
+            <TestimonialsCarousel />
+          </div>
+        </section>
+
         {/* Our Products Section */}
         <section id="products" className="py-24 relative overflow-hidden" style={{ background: "#05060F" }}>
           <AZWatermark size={320} opacity={0.015} rotate={-15} className="top-1/4 right-10" />
@@ -491,93 +579,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ════════════════════════════════════════════════════════════════════
-            MISSION + APPLICATION
-        ════════════════════════════════════════════════════════════════════ */}
-        <section id="mission" className="py-24 relative overflow-hidden" style={{ background: "#0D0F1A" }}>
-          <AZWatermark size={360} opacity={0.025} rotate={20} className="-bottom-10 left-1/2 -translate-x-1/2" />
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-center">
-
-              {/* Mission */}
-              <div>
-                <div className="section-tag mb-3">Mission</div>
-                <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight mb-6">
-                  Our <span className="text-gradient-gold">Mission</span>
-                </h2>
-                <p className="text-gray-400 leading-relaxed font-light max-w-xl">
-                  AlgoZenith Campus Connection Program bridges the gap between academic learning and
-                  industry demands. We empower students with resources, mentorship, and a platform to
-                  lead change on their campuses — creating meaningful impact across the student community.
-                </p>
-
-
-              </div>
-
-              {/* Application process */}
-              <div
-                className="rounded-2xl border border-white/[0.07] p-8"
-                style={{ background: "linear-gradient(145deg, #111320 0%, #0D0F1A 100%)" }}
-              >
-                <div className="section-tag mb-3">How to Join</div>
-                <h3 className="font-display font-bold text-xl text-white mb-8">
-                  Application Process
-                </h3>
-
-                {/* Timeline */}
-                <ol className="relative az-timeline-line space-y-8 ml-2 pl-8">
-                  {applicationSteps.map((step, i) => (
-                    <li key={step.title} className="relative">
-                      {/* Dot */}
-                      <div className="az-timeline-dot absolute -left-[42px] top-0.5" />
-                      {/* Step number */}
-                      <div className="section-tag mb-1 opacity-60">Step {i + 1}</div>
-                      <strong className="block text-white font-display font-semibold text-sm mb-1">
-                        {step.title}
-                      </strong>
-                      <span className="text-gray-400 text-xs leading-relaxed">{step.desc}</span>
-                    </li>
-                  ))}
-                </ol>
-
-                {/* Info links */}
-                <InfoModal />
-
-                {/* Apply CTA */}
-                <div className="mt-8 text-center">
-                  <a
-                    href="https://forms.gle/HpedZoLqd7puN1hPA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="az-btn-gold w-full justify-center"
-                  >
-                    Apply Now
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ════════════════════════════════════════════════════════════════════
-            TESTIMONIALS
-        ════════════════════════════════════════════════════════════════════ */}
-        <section id="testimonials" className="py-24 relative overflow-hidden" style={{ background: "#05060F" }}>
-          <AZWatermark size={440} opacity={0.022} rotate={-5} className="-bottom-16 -right-16" />
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-10">
-              <div className="section-tag mb-3">From Our Leads</div>
-              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
-                Words from Our{" "}
-                <span className="text-gradient-gold">Leaders</span>
-              </h2>
-            </div>
-            <TestimonialsCarousel />
-          </div>
-        </section>
 
 
 

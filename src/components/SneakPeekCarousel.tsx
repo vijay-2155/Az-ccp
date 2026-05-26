@@ -6,6 +6,7 @@ import {
 import Image from "next/image";
 
 const gallery = [
+  { src: "/gallery/contest.jpeg",             alt: "Contest event",                   caption: "Chapter Contest"                   },
   { src: "/gallery/ideathon.jpg",             alt: "Ideathon event",                  caption: "Ideathon"                          },
   { src: "/gallery/dsa-session.jpeg",         alt: "Resume & Networking session",     caption: "Session on Resume & Networking"    },
   { src: "/gallery/iit-kanpur-community.jpg", alt: "IIT Kanpur community",            caption: "IIT Kanpur Chapter"                },

@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import SneakPeekCarousel from "@/components/SneakPeekCarousel";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import InfoModal from "@/components/InfoModal";
-import EventsSection from "@/components/EventsSection";
 import MapWrapper from "@/components/MapWrapper";
 import AZWatermark from "@/components/AZWatermark";
 
@@ -242,13 +241,18 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
-                  {/* Contact pill */}
-                  <div className="mt-4 text-right">
-                    <a href="mailto:campusconnect@algozenith.com" className="az-btn-blue !text-xs">
-                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {/* Contact box */}
+                  <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm">
+                    <p className="text-[10px] font-display tracking-widest uppercase text-gray-500 mb-2">Get in touch</p>
+                    <p className="text-white/80 text-xs font-display font-medium mb-3">campusconnect@algozenith.com</p>
+                    <a
+                      href="mailto:campusconnect@algozenith.com"
+                      className="az-btn-blue !text-[10px] !py-2 !px-4 w-full justify-center"
+                    >
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      Contact Us
+                      Send us email
                     </a>
                   </div>
                 </div>
@@ -351,13 +355,9 @@ export default function HomePage() {
             
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <div className="section-tag mb-3 mx-auto">Ecosystem</div>
               <h2 className="font-display font-black text-4xl md:text-5xl text-white leading-tight">
                 Our Flagship <span className="text-gradient-gold">Products</span>
               </h2>
-              <p className="mt-4 text-gray-400 font-light text-sm sm:text-base leading-relaxed">
-                AlgoZenith Campus Connection Program is powered by leading platforms providing elite technical training and modern AI-driven career acceleration tools.
-              </p>
             </div>
 
             {/* Grid */}
@@ -385,7 +385,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <span className="px-2 py-0.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-[9px] font-display font-black tracking-widest uppercase">
-                      DSA & CP Platform
+                      Placement Prep Platform
                     </span>
                     <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-gold transition-colors duration-300">
                       AlgoZenith
@@ -579,10 +579,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ════════════════════════════════════════════════════════════════════
-            EVENTS
-        ════════════════════════════════════════════════════════════════════ */}
-        <EventsSection />
+
 
         {/* ════════════════════════════════════════════════════════════════════
             COMMUNITY MAP
@@ -644,77 +641,6 @@ export default function HomePage() {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Initiatives Section */}
-        <section id="initiatives" className="py-24 relative overflow-hidden" style={{ background: "#0A0B15" }}>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-            <div className="mb-12 text-center">
-              <div className="section-tag mb-3 inline-block">What We Do</div>
-              <h2 className="font-display font-black text-4xl md:text-5xl text-white">
-                Our <span className="text-gradient-gold">Initiatives</span>
-              </h2>
-              <p className="mt-4 text-gray-400 text-sm max-w-xl mx-auto leading-relaxed font-light">
-                From campus coding contests to career mentorship, AZ CCP chapters drive impactful, year-round initiatives that shape future tech leaders.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {[
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  ),
-                  title: "Coding Contests",
-                  desc: "Organize competitive programming events and hackathons that challenge and excite the campus tech community.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                    </svg>
-                  ),
-                  title: "DSA Workshops",
-                  desc: "Run weekly or monthly hands-on sessions on data structures, algorithms, and problem-solving with expert guidance.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  ),
-                  title: "Webinars & Talks",
-                  desc: "Invite industry professionals and AlgoZenith mentors to share real-world insights, career paths, and interview tips.",
-                },
-                {
-                  icon: (
-                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.6}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                  ),
-                  title: "Career Guidance",
-                  desc: "Host resume-building seminars, mock interviews, and placement prep sessions to help students land their dream roles.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="az-card rounded-2xl p-6 group relative overflow-hidden"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5 group-hover:bg-gold/15 group-hover:border-gold/35 transition-colors duration-300">
-                    {item.icon}
-                  </div>
-                  <h3 className="font-display font-bold text-sm text-white mb-2 group-hover:text-gold transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-500 text-xs leading-relaxed font-light">{item.desc}</p>
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              ))}
             </div>
           </div>
         </section>
@@ -798,7 +724,7 @@ export default function HomePage() {
                 { href: "#benefits",     label: "Benefits"     },
                 { href: "#mission",      label: "Mission"      },
                 { href: "#testimonials", label: "Testimonials" },
-                { href: "#events",       label: "Events"       },
+                { href: "#products",     label: "About"        },
                 { href: "#faq",          label: "FAQ"          },
               ].map((l) => (
                 <a

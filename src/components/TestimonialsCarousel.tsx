@@ -14,8 +14,8 @@ const testimonials = [
   {
     quote:   "During my tenure, I managed multiple teams with 40+ members and worked on organizing coding-focused initiatives that encouraged students to explore DSA, competitive programming, and technical growth. One of the most rewarding parts of this journey was successfully organizing 4 major coding events with participation from 1000+ students, which significantly increased student engagement in coding activities across the campus.",
     name:    "Aryan Bhargava",
-    college: "IIIT Bhagalpur",
-    photo:   "/testimonials/leads/aryan-bhargava.jfif",
+    college: "Kalinga Institute of Industrial Technology",
+    photo:   "/testimonials/leads/aryan-bhargava.png",
     cohort:  "2025/26",
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
   {
     quote:   "Leading the AlgoZenith CCP chapter was an amazing experience. I mentored students, organized coding sessions, and helped build a strong problem-solving culture on campus. The role enhanced my leadership, communication, and technical skills while allowing me to contribute meaningfully to a collaborative and motivated competitive programming community.",
     name:    "Aastik Das",
-    college: "Kalinga Institute of Industrial Technology",
+    college: "IIIT Bhagalpur",
     photo:   "/testimonials/leads/astik-das.jpg",
     cohort:  "2025/26",
   },

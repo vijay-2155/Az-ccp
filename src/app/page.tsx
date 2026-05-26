@@ -637,9 +637,9 @@ export default function HomePage() {
                   >
                     Apply Now &amp; Lead
                   </a>
-                  <a href="mailto:campusconnect@algozenith.com" className="az-btn-outline">
-                    Contact Us
-                  </a>
+                  <div className="az-btn-outline cursor-default select-all !text-cyan">
+                    campusconnect@algozenith.com
+                  </div>
                 </div>
               </div>
             </div>

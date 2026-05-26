@@ -497,7 +497,7 @@ export default function HomePage() {
         <section id="mission" className="py-24 relative overflow-hidden" style={{ background: "#0D0F1A" }}>
           <AZWatermark size={360} opacity={0.025} rotate={20} className="-bottom-10 left-1/2 -translate-x-1/2" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 xl:gap-20 items-center">
 
               {/* Mission */}
               <div>

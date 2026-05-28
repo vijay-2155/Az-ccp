@@ -28,7 +28,7 @@ const testimonials = [
   {
     quote:   "Leading the AlgoZenith CCP chapter was an amazing experience. I mentored students, organized coding sessions, and helped build a strong problem-solving culture on campus. The role enhanced my leadership, communication, and technical skills while allowing me to contribute meaningfully to a collaborative and motivated competitive programming community.",
     name:    "Aastik Das",
-    college: "IIIT Bhagalpur",
+    college: "Indian Institute of Information Technology, Bhagalpur",
     photo:   "/testimonials/leads/astik-das.jpg",
     cohort:  "2025/26",
   },
@@ -203,7 +203,14 @@ export default function TestimonialsCarousel() {
                   </div>
                   <div
                     className="mt-1 leading-snug"
-                    style={{ fontSize: "0.65rem", color: "#FFD60A", opacity: 0.75, letterSpacing: "0.06em" }}
+                    style={{
+                      fontSize:    "0.62rem",
+                      color:       "#FFD60A",
+                      opacity:     0.75,
+                      letterSpacing: "0.05em",
+                      lineHeight:  1.45,
+                      maxWidth:    "90%",
+                    }}
                   >
                     {t.college}
                   </div>

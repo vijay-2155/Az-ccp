@@ -6,24 +6,72 @@ import {
 import Image from "next/image";
 
 const gallery = [
-  { src: "/gallery/contest.jpeg",                  alt: "Contest event",                           caption: "Chapter Contest"                      },
-  { src: "/gallery/ideathon.jpg",                  alt: "Ideathon event",                          caption: "Ideathon"                             },
-  { src: "/gallery/dsa-session.jpeg",              alt: "Resume & Networking session",             caption: "Session on Resume & Networking"       },
-  { src: "/gallery/iit-kanpur-community.jpg",      alt: "IIT Kanpur community",                    caption: "IIT Kanpur Chapter"                   },
-  { src: "/gallery/workshop.jpg",                  alt: "DSA workshop",                            caption: "Introduction to Programming & DSA"    },
-  { src: "/gallery/cp-contest.jpeg",               alt: "Competitive programming contest",         caption: "Competitive Programming Contest"      },
-  { src: "/gallery/coding-contest-view.jpg",       alt: "Coding contest crowd view",              caption: "Coding Contest"                       },
-  { src: "/gallery/coding-contest-viit.jpg",       alt: "Coding contest at VIIT",                 caption: "Coding Contest — VIIT"                },
-  { src: "/gallery/design-decode-viit.jpg",        alt: "Design Decode event at VIIT",            caption: "Design Decode — VIIT"                 },
-  { src: "/gallery/ideathon-view.jpg",             alt: "Ideathon audience view",                  caption: "Ideathon"                             },
-  { src: "/gallery/iiit-bhagalpur-ideathon.jpg",   alt: "Ideathon at IIIT Bhagalpur",             caption: "Ideathon — IIIT Bhagalpur"            },
-  { src: "/gallery/iiit-bhagalpur-ideathon2.jpg",  alt: "Ideathon at IIIT Bhagalpur crowd",       caption: "Ideathon — IIIT Bhagalpur"            },
-  { src: "/gallery/iiit-bhagalpur-intro-cp-dsa.jpg", alt: "Intro to CP & DSA at IIIT Bhagalpur", caption: "Intro to CP & DSA — IIIT Bhagalpur"  },
-  { src: "/gallery/srmcem-intro-dsa-cp.jpg",       alt: "Intro to DSA & CP at SRMCEM",            caption: "Intro to DSA & CP — SRMCEM"           },
-  { src: "/gallery/kiit-code-kurukshetra.jpg",     alt: "Code Kurukshetra at KIIT",               caption: "Code Kurukshetra — KIIT"              },
-  { src: "/gallery/kiit-dark-route.jpg",           alt: "Dark Route event at KIIT",               caption: "Dark Route — KIIT"                    },
-  { src: "/gallery/srcem-algo-arena.jpg",          alt: "Algo Arena at SRCEM",                    caption: "Algo Arena — SRCEM"                   },
-  { src: "/gallery/viit-chrome-hackathon.jpg",     alt: "Chrome Extensions Hackathon at VIIT",    caption: "Chrome Hackathon — VIIT"              },
+  {
+    src:     "/gallery/iit-kanpur-community.jpg",
+    alt:     "IIT Kanpur community",
+    caption: "IIT Kanpur Chapter",
+    college: "Indian Institute of Technology, Kanpur",
+  },
+  {
+    src:     "/gallery/viit-coding-contest.jpg",
+    alt:     "Coding contest at VIIT",
+    caption: "Coding Contest",
+    college: "Vignan's Institute of Information Technology",
+  },
+  {
+    src:     "/gallery/viit-design-decode.jpg",
+    alt:     "Design Decode event at VIIT",
+    caption: "Design Decode",
+    college: "Vignan's Institute of Information Technology",
+  },
+  {
+    src:     "/gallery/kiit-dark-route.jpg",
+    alt:     "Dark Route event at KIIT",
+    caption: "Dark Route",
+    college: "Kalinga Institute of Industrial Technology",
+  },
+  {
+    src:     "/gallery/kiit-code-kurukshetra.jpeg",
+    alt:     "Code Kurukshetra at KIIT",
+    caption: "Code Kurukshetra",
+    college: "Kalinga Institute of Industrial Technology",
+  },
+  {
+    src:     "/gallery/viit-cp-dsa-session.jpg",
+    alt:     "CP & DSA Session at VIIT",
+    caption: "CP & DSA Session",
+    college: "Vignan's Institute of Engineering for Women",
+  },
+  {
+    src:     "/gallery/viit-ideathon-view.jpg",
+    alt:     "Ideathon at VIIT",
+    caption: "Ideathon",
+    college: "Vignan's Institute of Engineering for Women",
+  },
+  {
+    src:     "/gallery/iiit-bhagalpur-ideathon.jpg",
+    alt:     "Ideathon at IIIT Bhagalpur",
+    caption: "Ideathon",
+    college: "Indian Institute of Information Technology, Bhagalpur",
+  },
+  {
+    src:     "/gallery/iiit-bhagalpur-intro-cp-dsa.jpg",
+    alt:     "Intro to CP & DSA at IIIT Bhagalpur",
+    caption: "Intro to CP & DSA",
+    college: "Indian Institute of Information Technology, Bhagalpur",
+  },
+  {
+    src:     "/gallery/viit-chrome-hackathon.jpeg",
+    alt:     "Chrome Extensions Hackathon at VIIT",
+    caption: "Chrome Extensions Hackathon",
+    college: "Vignan's Institute of Information Technology",
+  },
+  {
+    src:     "/gallery/bbdit-web-dev-workshop.jpg",
+    alt:     "Web Dev Workshop at BBDIT",
+    caption: "Web Dev Workshop",
+    college: "Babu Banarasi Das Institute of Technology & Management",
+  },
 ];
 
 const CARD_W    = 300;   // fixed card width (px)
@@ -176,15 +224,35 @@ export default function SneakPeekCarousel() {
               {/* Caption */}
               <figcaption
                 style={{
-                  padding:       "10px 16px 14px",
+                  padding:    "10px 16px 14px",
+                  transition: "color 0.6s ease",
+                }}
+              >
+                {/* Event name */}
+                <p style={{
+                  margin:        0,
                   fontSize:      "0.68rem",
                   fontFamily:    "var(--font-unbounded, sans-serif)",
                   letterSpacing: "0.18em",
                   color:         isActive ? "#FFD60A" : "#3A4058",
                   transition:    "color 0.6s ease",
-                }}
-              >
-                {item.caption}
+                  lineHeight:    1.3,
+                }}>
+                  {item.caption}
+                </p>
+                {/* Full college name */}
+                <p style={{
+                  margin:        "4px 0 0",
+                  fontSize:      "0.6rem",
+                  fontFamily:    "var(--font-geist-sans, sans-serif)",
+                  letterSpacing: "0.02em",
+                  color:         isActive ? "rgba(255,255,255,0.55)" : "rgba(255,255,255,0.15)",
+                  transition:    "color 0.6s ease",
+                  lineHeight:    1.4,
+                  fontStyle:     "italic",
+                }}>
+                  {item.college}
+                </p>
               </figcaption>
             </figure>
           );

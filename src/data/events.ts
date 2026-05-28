@@ -37,7 +37,7 @@ export const events: AZEvent[] = [
     image:       "/gallery/viit-cp-dsa-session.jpg",
     gallery:     ["/gallery/viit-cp-dsa-session.jpg", "/gallery/iit-kanpur-community.jpg", "/gallery/viit-ideathon-view.jpg", "/gallery/bbdit-web-dev-workshop.jpg"],
     galleryUrl:  null,
-    link:        "https://forms.gle/HpedZoLqd7puN1hPA",
+    link:        "https://forms.gle/iehrkGsicZLNexCG8",
   },
 
   /* ── UPCOMING ──────────────────────────────────────────────────────── */
@@ -55,7 +55,7 @@ export const events: AZEvent[] = [
     image:       "/gallery/viit-coding-contest.jpg",
     gallery:     [],
     galleryUrl:  null,
-    link:        "https://forms.gle/HpedZoLqd7puN1hPA",
+    link:        "https://forms.gle/iehrkGsicZLNexCG8",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const events: AZEvent[] = [
     image:       "/gallery/bbdit-web-dev-workshop.jpg",
     gallery:     [],
     galleryUrl:  null,
-    link:        "https://forms.gle/HpedZoLqd7puN1hPA",
+    link:        "https://forms.gle/iehrkGsicZLNexCG8",
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export const events: AZEvent[] = [
     image:       "/community/winning-goodies.jpeg",
     gallery:     [],
     galleryUrl:  null,
-    link:        "https://forms.gle/HpedZoLqd7puN1hPA",
+    link:        "https://forms.gle/iehrkGsicZLNexCG8",
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ export const events: AZEvent[] = [
     image:       "/hero/az-team.jpeg",
     gallery:     [],
     galleryUrl:  null,
-    link:        "https://forms.gle/HpedZoLqd7puN1hPA",
+    link:        "https://forms.gle/iehrkGsicZLNexCG8",
   },
 
   /* ── PAST ──────────────────────────────────────────────────────────── */

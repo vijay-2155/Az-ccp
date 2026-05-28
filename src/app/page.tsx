@@ -170,7 +170,7 @@ export default function HomePage() {
                   {/* Primary CTA row — always side-by-side */}
                   <div className="flex flex-row flex-wrap gap-2.5">
                     <a
-                      href="https://forms.gle/HpedZoLqd7puN1hPA"
+                      href="https://forms.gle/iehrkGsicZLNexCG8"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="az-btn-gold !py-2.5 !px-5 !text-[11px] sm:!text-sm flex-shrink-0"
@@ -403,7 +403,7 @@ export default function HomePage() {
                 {/* Apply CTA */}
                 <div className="mt-8 text-center">
                   <a
-                    href="https://forms.gle/HpedZoLqd7puN1hPA"
+                    href="https://forms.gle/iehrkGsicZLNexCG8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="az-btn-gold w-full justify-center"
@@ -630,7 +630,7 @@ export default function HomePage() {
 
                 <div className="mt-10 flex flex-wrap gap-4">
                   <a
-                    href="https://forms.gle/HpedZoLqd7puN1hPA"
+                    href="https://forms.gle/iehrkGsicZLNexCG8"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="az-btn-gold"

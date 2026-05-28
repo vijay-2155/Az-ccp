@@ -120,7 +120,7 @@ export default function Navbar() {
 
               {/* Apply Now – always visible */}
               <a
-                href="https://forms.gle/HpedZoLqd7puN1hPA"
+                href="https://forms.gle/iehrkGsicZLNexCG8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="az-btn-gold !py-2 !px-5 !text-[10.5px] hidden sm:inline-flex"
@@ -218,7 +218,7 @@ export default function Navbar() {
           {/* Apply */}
           <div className="p-3">
             <a
-              href="https://forms.gle/HpedZoLqd7puN1hPA"
+              href="https://forms.gle/iehrkGsicZLNexCG8"
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}

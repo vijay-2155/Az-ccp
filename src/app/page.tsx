@@ -146,11 +146,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/20 bg-gold/[0.06] mb-4 animate-fade-up">
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse flex-shrink-0" />
-                  <span className="text-[10px] font-display font-semibold text-gold/80 tracking-widest uppercase">Applications Open</span>
-                </div>
 
                 {/* Main heading */}
                 <h1 className="font-display font-extrabold leading-[1.08] text-white animate-fade-up delay-100 text-[clamp(2rem,8vw,4.2rem)] tracking-tight">
@@ -488,9 +483,9 @@ export default function HomePage() {
                 {/* Features list */}
                 <ul className="space-y-4 mb-8">
                   {[
-                    "Custom interactive Learning Management System (LMS)",
-                    "Complete structured curriculum covering advanced DSA, Math, and CP",
-                    "Elite contest arena with real-time editorial codes & diagnostics"
+                    "Personalized mentorship support from industry experts to guide your technical growth and career progression.",
+                    "Structured learning path with a comprehensive curriculum covering DSA, Competitive Programming, and System Design.",
+                    "End-to-end placement support with mock interviews, resume profiling, and direct referrals to top-tier tech companies."
                   ].map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
                       <span className="w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 text-gold text-[10px] font-bold">✓</span>
@@ -550,9 +545,9 @@ export default function HomePage() {
                 {/* Features list */}
                 <ul className="space-y-4 mb-8">
                   {[
-                    "AI-driven resume reviewer, scorer, and template optimizer",
-                    "Decentralized placement network connecting student leaders directly",
-                    "Proprietary skill-matching mapping for active internship channels"
+                    "Smart resume builder that automatically designs and optimizes your profile with recruiter-approved, industry-proven templates.",
+                    "Streamlined and easy job application process designed to connect you with top companies in just a few clicks.",
+                    "AI-driven career optimization tool that analyzes and matches your unique skill set with high-paying job opportunities."
                   ].map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
                       <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 text-blue-400 text-[10px] font-bold">✓</span>

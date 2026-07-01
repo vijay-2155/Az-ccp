@@ -546,10 +546,9 @@ export default function HomePage() {
                 {/* Features list */}
                 <ul className="space-y-4 mb-8">
                   {[
-                    "ATS friendly application",
-                    "Job optimization",
-                    "Authorised job application",
-                    "Tech community discussion"
+                    "ATS-friendly resume optimization to improve your chances of getting shortlisted.",
+                    "Authorized job applications with AI-driven career guidance for better placement opportunities.",
+                    "Active tech community for networking, mentorship, discussions, and continuous learning."
                   ].map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
                       <span className="w-5 h-5 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0 text-purple-400 text-[10px] font-bold">✓</span>

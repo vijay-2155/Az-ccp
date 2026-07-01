@@ -447,30 +447,31 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
               
               {/* Left Column: AlgoZenith */}
-              <div 
-                className="group relative rounded-2xl border border-gold/10 p-8 sm:p-10 transition-all duration-500 hover:border-gold/30 hover:shadow-[0_0_40px_rgba(255,214,10,0.08)] overflow-hidden"
+              <div
+                className="group relative rounded-2xl border border-blue-500/10 p-8 sm:p-10 transition-all duration-500 hover:border-blue-400/35 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] overflow-hidden"
                 style={{ background: "linear-gradient(145deg, #0B0C15 0%, #05060F 100%)" }}
               >
                 {/* Accent glow on top and hover background glow */}
-                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-gold/45 to-transparent" />
-                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-gold/5 blur-2xl group-hover:bg-gold/10 transition-all duration-500" />
-                
+                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/45 to-transparent" />
+                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all duration-500" />
+
                 {/* Brand header block */}
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-gold/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-blue-500/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/brand/az-logo.png"
                       alt="AlgoZenith Logo"
                       fill
                       sizes="56px"
                       className="object-contain p-2"
+                      style={{ filter: "hue-rotate(190deg) saturate(2) brightness(1.15)" }}
                     />
                   </div>
                   <div>
-                    <span className="px-2 py-0.5 rounded-full bg-gold/10 border border-gold/25 text-gold text-[9px] font-display font-black tracking-widest uppercase">
+                    <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[9px] font-display font-black tracking-widest uppercase">
                       Placement Prep Platform
                     </span>
-                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-gold transition-colors duration-300">
+                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-blue-400 transition-colors duration-300">
                       AlgoZenith
                     </h3>
                   </div>
@@ -488,7 +489,7 @@ export default function HomePage() {
                     "End-to-end placement support with mock interviews, resume profiling, and direct referrals to top-tier tech companies."
                   ].map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
-                      <span className="w-5 h-5 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 text-gold text-[10px] font-bold">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 text-blue-400 text-[10px] font-bold">✓</span>
                       <span className="font-light">{feat}</span>
                     </li>
                   ))}
@@ -499,7 +500,7 @@ export default function HomePage() {
                   href="https://maang.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gold text-black hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
                 >
                   Explore AlgoZenith
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -509,17 +510,17 @@ export default function HomePage() {
               </div>
 
               {/* Right Column: CareerZenith */}
-              <div 
-                className="group relative rounded-2xl border border-blue-500/10 p-8 sm:p-10 transition-all duration-500 hover:border-blue-400/35 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)] overflow-hidden"
+              <div
+                className="group relative rounded-2xl border border-purple-500/10 p-8 sm:p-10 transition-all duration-500 hover:border-purple-400/35 hover:shadow-[0_0_40px_rgba(168,85,247,0.08)] overflow-hidden"
                 style={{ background: "linear-gradient(145deg, #0B0C15 0%, #05060F 100%)" }}
               >
                 {/* Accent glow on top and hover background glow */}
-                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-blue-500/45 to-transparent" />
-                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all duration-500" />
-                
+                <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-purple-500/45 to-transparent" />
+                <div className="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all duration-500" />
+
                 {/* Brand header block */}
                 <div className="flex items-center gap-4 mb-8">
-                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-blue-500/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-14 h-14 rounded-2xl bg-black/40 border border-purple-500/25 p-2 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/hero/cz.webp"
                       alt="CareerZenith Logo"
@@ -529,10 +530,10 @@ export default function HomePage() {
                     />
                   </div>
                   <div>
-                    <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-[9px] font-display font-black tracking-widest uppercase">
+                    <span className="px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-purple-400 text-[9px] font-display font-black tracking-widest uppercase">
                       AI Career Accelerator
                     </span>
-                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-blue-400 transition-colors duration-300">
+                    <h3 className="font-display font-black text-2xl text-white tracking-tight mt-1 group-hover:text-purple-400 transition-colors duration-300">
                       CareerZenith
                     </h3>
                   </div>
@@ -545,12 +546,13 @@ export default function HomePage() {
                 {/* Features list */}
                 <ul className="space-y-4 mb-8">
                   {[
-                    "Smart resume builder that automatically designs and optimizes your profile with recruiter-approved, industry-proven templates.",
-                    "Streamlined and easy job application process designed to connect you with top companies in just a few clicks.",
-                    "AI-driven career optimization tool that analyzes and matches your unique skill set with high-paying job opportunities."
+                    "ATS friendly application",
+                    "Job optimization",
+                    "Authorised job application",
+                    "Tech community discussion"
                   ].map((feat, idx) => (
                     <li key={idx} className="flex items-start gap-3.5 text-xs text-gray-300">
-                      <span className="w-5 h-5 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 text-blue-400 text-[10px] font-bold">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-purple-500/10 flex items-center justify-center flex-shrink-0 text-purple-400 text-[10px] font-bold">✓</span>
                       <span className="font-light">{feat}</span>
                     </li>
                   ))}
@@ -561,7 +563,7 @@ export default function HomePage() {
                   href="https://careerzenith.ai/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-blue-500 text-white hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-purple-500 text-white hover:bg-white hover:text-black transition-all duration-300 font-display font-extrabold text-xs tracking-wider uppercase w-full sm:w-auto justify-center shadow-lg hover:shadow-white/10"
                 >
                   Explore CareerZenith
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
